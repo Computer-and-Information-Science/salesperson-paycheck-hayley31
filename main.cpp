@@ -1,33 +1,29 @@
 #include <iostream>
-#include <fstream>
 #include <iomanip>
 #include <string>
 
 using namespace std;
 
 int main() {
-    std::string fileName;
-    std::ifstream inputFile;
-
-    cout << " Enter employee first and last name: ";
-    cin >> fileName;
-
-    inputFile.open(fileName);
-
-    if (!inputFile) {
-       cout << "Error opening file." << endl;
-       return 1;
-    }
-    // Variables
     string firstName, lastName;
     double baseSalary, commissionPercent;
     double totalSales, expenses;
 
-    // Read data from file
-    inputFile >> firstName >> lastName;
-    inputFile >> baseSalary >> commissionPercent;
-    inputFile >> totalSales;
-    inputFile >> expenses;
+    // Get employee name
+    cout << "Enter employee first and last name: ";
+    cin >> firstName >> lastName;
+
+    // Get base salary and commission percentage
+    cout << "Enter base salary and commission percentage: ";
+    cin >> baseSalary >> commissionPercent;
+
+    // Get total sales
+    cout << "Enter total sales: ";
+    cin >> totalSales;
+
+    // Get expenses
+    cout << "Enter expenses: ";
+    cin >> expenses;
 
     // Calculations
     double commission = totalSales * (commissionPercent / 100.0);
@@ -52,6 +48,5 @@ int main() {
     cout << "Total:" << endl;
     cout << totalPay << endl;
 
-    inputFile.close();
     return 0;
 }
