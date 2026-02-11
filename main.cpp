@@ -36,12 +36,13 @@ int main() {
     // Output
     cout << fixed << setprecision(2);
     cout << "\nPayroll data for " << firstName << " " << lastName << endl << endl;
-    cout << "Base Salary:" << setw(8) << baseSalary << endl;
-    cout << "Commission:" << setw(7) << commission << " (" << setprecision(1) << commissionPercent << "% of " 
-         << fixed << setprecision(2) << totalSales << ")" << endl;
-    cout << "Expenses:" << setw(11) << expenses << endl;
+    cout << "Base Salary:    " << setw(7) << baseSalary << endl;
+    cout << "Commission:     " << setw(7) << commission << " (" 
+         << setprecision(1) << commissionPercent 
+         << setprecision(2) << "% of " << totalSales << ")" << endl;
+    cout << "Expenses:       " << setw(7) << expenses << endl;
     cout << "               --------" << endl;
-    cout << "Total:" << setw(14) << totalPay << endl;
+    cout << "Total:          " << setw(7) << totalPay << endl;
 
     return 0;
 }
