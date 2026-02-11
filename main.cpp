@@ -15,7 +15,7 @@ int main() {
     cout << "Enter the name of the file: ";
     cin >> filename;
 
-    // Open file
+    // Open file 
     ifstream inputFile(filename);
     if (!inputFile) {
         cerr << "Error opening file!" << endl;
